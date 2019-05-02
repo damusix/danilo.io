@@ -1,0 +1,23 @@
+<app>
+    <app-nav></app-nav>
+    <h1>Hey</h1>
+    <p each={ gist in state.gists }>{ gist.name }</p>
+    <app-footer></app-footer>
+
+    <script>
+        export default {
+            onBeforeMount(_, props) {
+
+                const { state, stream, actions } = this.props;
+                Object.assign(this, { state, stream, actions });
+
+                stream.on.value((updated) => {
+
+                    this.update(updated);
+                });
+
+                console.log(actions)
+            }
+        }
+    </script>
+</app>
