@@ -1,0 +1,157 @@
+{
+    "programmingLanguages": {
+        "Javascript": {
+            "level": 90,
+            "description": ""
+        },
+        "Ruby": {
+            "level": 70,
+            "description": ""
+        },
+        "PHP": {
+            "level": 70,
+            "description": ""
+        },
+        "Bash": {
+            "level": 70,
+            "description": ""
+        },
+        "Python": {
+            "level": 50,
+            "description": ""
+        },
+        "Erlang": {
+            "level": 50,
+            "description": ""
+        },
+        "Elixir": {
+            "level": 50,
+            "description": ""
+        }
+    },
+    "cloudProviders": {
+        "AWS": {
+            "level": 80,
+            "description": ""
+        },
+        "GCE": {
+            "level": 70,
+            "description": ""
+        },
+        "Linode": {
+            "level": 60,
+            "description": ""
+        },
+        "Digital Ocean": {
+            "level": 60,
+            "description": ""
+        }
+    },
+    "devopsSoftware": {
+        "Terraform": {
+            "level": 80,
+            "description": ""
+        },
+        "Docker": {
+            "level": 70,
+            "description": ""
+        },
+        "Jenkins": {
+            "level": 70,
+            "description": ""
+        },
+        "Gitlab": {
+            "level": 70,
+            "description": ""
+        },
+        "Github": {
+            "level": 80,
+            "description": ""
+        },
+        "Bitbucket": {
+            "level": 60,
+            "description": ""
+        }
+    },
+    "frameworks": {
+        "Hapijs": {
+            "level": 90,
+            "description": ""
+        },
+        "Reactjs": {
+            "level": 80,
+            "description": ""
+        },
+        "Riotjs": {
+            "level": 90,
+            "description": ""
+        },
+        "Preactjs": {
+            "level": 80,
+            "description": ""
+        },
+        "Ruby on Rails": {
+            "level": 70,
+            "description": ""
+        },
+        "Vuejs": {
+            "level": 50,
+            "description": ""
+        },
+        "Phoenix": {
+            "level": 50,
+            "description": ""
+        },
+        "Laravel": {
+            "level": 50,
+            "description": ""
+        }
+    },
+    "databases": {
+
+        "MySQL / MariaDB": {
+            "level": 80,
+            "description": ""
+        },
+        "PostgreSQL": {
+            "level": 70,
+            "description": ""
+        },
+        "SQLite3": {
+            "level": 70,
+            "description": ""
+        },
+        "MongoDB": {
+            "level": 70,
+            "description": ""
+        }
+    },
+    "expertise": {
+        "Javascript": {
+            "level": 90,
+            "description": ""
+        },
+        "NodeJS": {
+            "level": 90,
+            "description": ""
+        },
+        "DOM": {
+            "level": 90,
+            "description": ""
+        },
+        "Ruby": {
+            "level": 70,
+            "description": ""
+        }
+    },
+    "concepts": {
+
+        "OOP": "",
+        "Functional Programming": "",
+        "OTP": "",
+        "MVC": "",
+        "State Management": "",
+        "Build Tools": "",
+        "Server Management": ""
+    }
+}

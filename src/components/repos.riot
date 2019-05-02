@@ -1,0 +1,18 @@
+<repos>
+
+    <p each={ repo in state.repos } if={ !repo.fork }>{ repo.name }</p>
+
+    <script>
+
+        export default {
+            onBeforeMount(props, state) {
+
+                console.log(props)
+            }
+            onBeforeUpdate() {
+
+                console.log(this.state)
+            }
+        }
+    </script>
+</repos>

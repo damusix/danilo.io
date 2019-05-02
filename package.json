@@ -11,10 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@riotjs/hot-reload": "^4.0.0-beta.1",
     "@riotjs/webpack-loader": "^4.0.0",
     "animejs": "^3.0.1",
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "erre": "^2.1.4",
     "riot": "^4.0.0-rc.2",

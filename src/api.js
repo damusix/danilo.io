@@ -1,14 +1,26 @@
+import axios from 'axios';
+
+const api = axios.create({
+
+    baseURL: 'https://api.github.com',
+    timeout: 1000,
+    headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/vnd.github.inertia-preview+json'
+    }
+});
+
 const username = 'damusix';
-const baseUrl = 'https://api.github.com';
 
 const urls = {
 
     gists: `/users/${username}/gists`,
-    projects: `/users/${username}/projects`,
+    repos: `/users/${username}/repos`,
 };
 
-const headers = {
-    'Content-Type': 'application/json',
-    Accept: 'application/vnd.github.inertia-preview+json'
-};
 
+export default {
+
+    getGists: () => api.get(urls.gists),
+    getRepos: () => api.get(urls.repos)
+}

@@ -3,8 +3,7 @@ import erre from 'erre';
 
 import Actions from './actions';
 import App from './app.riot';
-import Navigation from './components/nav.riot';
-import Footer from './components/footer.riot';
+import './components';
 
 let state = {
     repos: [],
@@ -24,15 +23,19 @@ const stream = erre(function (update) {
 
 const actions = Actions(stream);
 
+riot.install(function (component) {
 
-riot.register('app-nav', Navigation);
-riot.register('app-footer', Footer);
+    component.state = state;
+    component.actions = actions;
+
+    // console.log(component)
+    stream.on.value((updated) => component.update(updated));
+});
 
 const mountApp = riot.component(App);
-
 
 const app = mountApp(document.getElementById('root'), {
     stream,
     actions,
     state
-})
+});

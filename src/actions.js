@@ -1,14 +1,15 @@
+import Api from './api';
 
 export default (stream) => ({
 
-    getRepos: () => {
+    getRepos: async () => {
 
-        const repos = [{ name: 'myrepo' }]
-        stream.push({ repos });
+        const { data } = await Api.getRepos();
+        stream.push({ repos: data });
     },
-    getGists: () => {
+    getGists: async () => {
 
-        const gists = [{ name: 'mygist' }]
-        stream.push({ gists });
+        const { data } = await Api.getGists();
+        stream.push({ gists: data });
     }
 })
