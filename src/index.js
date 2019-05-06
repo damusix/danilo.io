@@ -1,14 +1,24 @@
 import * as riot from 'riot';
 import erre from 'erre';
+import events from 'bianco.events';
+
+import './app.sass';
+
+import { debounce } from './utils';
 
 import Actions from './actions';
 import App from './app.riot';
 import './components';
 
+import Data from './data.json'
+
 let state = {
     repos: [],
     gists: [],
-    heading: 'Danilo Alonso'
+    packages: [],
+    heading: 'Danilo Alonso',
+    isMobile: null,
+    data: Data
 };
 
 const stream = erre(function (update) {
@@ -23,6 +33,10 @@ const stream = erre(function (update) {
 
 const actions = Actions(stream);
 
+actions.screenChecks();
+
+events.add(global, 'resize', debounce(actions.screenChecks, 250));
+
 riot.install(function (component) {
 
     component.state = state;
@@ -34,7 +48,7 @@ riot.install(function (component) {
 
 const mountApp = riot.component(App);
 
-const app = mountApp(document.getElementById('root'), {
+mountApp(document.getElementById('root'), {
     stream,
     actions,
     state

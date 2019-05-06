@@ -1,0 +1,34 @@
+#skills
+
+    h3
+        margin: 4rem 0 2rem
+    .skill
+        .rating
+            margin: 0.25rem
+            border: 1px solid #eee
+            background: #fdfdfd
+            width: 200px
+            transition-property: box-shadow, background
+            transition-duration: 250ms
+            transition-timing-function: ease-in-out
+            box-shadow: 0 1px 5px -3px rgba($quinary,0.5)
+
+
+            &:hover
+                background: #fff
+                box-shadow: 0 3px 10px -3px rgba($quinary,0.2)
+
+
+            h5, stars
+                display: block
+                margin-bottom: 1rem
+
+            h5
+                color: $quinary
+
+            stars
+                color: $primary
+
+            & > div
+                padding: 1rem
+

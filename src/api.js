@@ -22,5 +22,6 @@ const urls = {
 export default {
 
     getGists: () => api.get(urls.gists),
-    getRepos: () => api.get(urls.repos)
+    getRepos: () => api.get(urls.repos),
+    getPackages: () => axios.get('http://npmsearch.com/query?q=author:damusix')
 }

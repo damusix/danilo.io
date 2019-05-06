@@ -1,0 +1,81 @@
+header#nav
+    display: flex
+    height: $nav-height
+    padding: 0 1rem;
+    box-shadow: 0 -3px 5px black
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    background: #fff
+    z-index: 50
+
+    *
+        line-height: $nav-height
+
+    .toggle
+        padding: 0 1.5rem
+        color: $quinary
+        font-size: 1.2rem
+        margin: 0
+
+        &:hover
+            background: $primary
+            color: white
+            cursor: pointer
+
+    #menu-toggle
+        display: none
+
+    h1
+        font-size: 2rem
+        color: $quinary
+        font-weight: 600
+
+        a
+            color: $quaternary
+    h1,
+    nav,
+    nav a
+        display: inline-block
+
+    nav a, nav .mobile-title
+        padding: 0 1rem;
+        cursor: pointer
+    nav a
+        color: $quaternary
+        &:hover
+            color: white
+            background: $primary
+    nav
+        text-align: right
+        flex: 1
+
+@media #{$mobile}
+    header#nav
+        nav
+            background: #000
+            height: 100vh
+            width: 75vw
+            position: fixed
+            top: 0
+            left: 100%
+            z-index: 55
+            transition-property: left
+            transition-duration: 250ms
+            transition-timing-function: ease-in-out
+
+            &.open
+                left: 25%
+
+            .mobile-title
+                margin: 0
+                font-size: 2rem
+                color: white
+
+            & > a, .mobile-title
+                width: 100%
+                text-align: left
+
+            .toggle:hover
+                background: transparent

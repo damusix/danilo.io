@@ -1,0 +1,17 @@
+<stars>
+
+    <i
+        each={ (n) in [1,2,3,4,5] }
+        class={ className(n) }
+    ></i>
+    <script>
+        export default {
+
+            className (n) {
+                const fa = n > this.props.rating ? 'far' : 'fas';
+
+                return `${fa} fa-star`
+            }
+        }
+    </script>
+</stars>

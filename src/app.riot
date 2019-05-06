@@ -1,23 +1,39 @@
 <app>
-    <app-nav></app-nav>
-    <h1>Danilo Alonso</h1>
-    <h2>Web Programmer | JS Nerd</h2>
+    <header id="nav" is="app-nav" class="grid wrap no-padding"></header>
 
-    <div class="work">
-        <h4>Gists</h4>
-        <gists></gists>
-        <hr>
-        <h4>Repos</h4>
-        <repos></repos>
-    </div>
-    <app-footer></app-footer>
+    <section
+        id='site-header'
+        is="site-header"
+        class="screen dark text-center grid column center justify-center"
+    ></section>
+    <section
+        is="about"
+        class="screen"
+    ></section>
+    <section
+        is="experience"
+        class="screen dark"
+    ></section>
+    <section
+        id="skills"
+        is="skills"
+        class="screen"
+    ></section>
+    <section
+        id="work"
+        is="work"
+        class="screen dark"
+    ></section>
+
+    <footer is="app-footer"></footer>
 
     <script>
         export default {
             onBeforeMount(props) {
 
-                this.actions.getGists()
-                this.actions.getRepos()
+                this.actions.getGists();
+                this.actions.getRepos();
+                this.actions.getPackages();
             }
         }
     </script>

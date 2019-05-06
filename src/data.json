@@ -1,149 +1,192 @@
 {
-    "programmingLanguages": {
-        "Javascript": {
-            "level": 90,
-            "description": ""
+    "programmingLanguages": [
+        {
+            "title": "Javascript",
+            "rating": 5,
+            "description": "My number 1 go-to for anything frontend or backend. I have grown very comfortable doing backend in Node."
         },
-        "Ruby": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Ruby",
+            "rating": 4,
+            "description": "Ruby is where I really cut my teeth and learned application programming. My programming thought process comes primarily from what I learned doing Ruby."
         },
-        "PHP": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "PHP",
+            "rating": 4,
+            "description": "I learned to program first in PHP. I worked Wordpress for a long time. Dabbled in Drupal, and eventually Laravel a bit."
         },
-        "Bash": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Bash",
+            "rating": 4,
+            "description": "Probably one of the only scripting languages you ever need to know :P"
         },
-        "Python": {
-            "level": 50,
-            "description": ""
+        {
+            "title": "Python",
+            "rating": 3,
+            "description": "Have done some minor things in Python. Have played with Falcon, Flask. Mostly for fun, but never needed it."
         },
-        "Erlang": {
-            "level": 50,
-            "description": ""
+        {
+            "title": "Erlang",
+            "rating": 2,
+            "description": "Currently learning and very very interested in Erlang"
         },
-        "Elixir": {
-            "level": 50,
-            "description": ""
+        {
+            "title": "Elixir",
+            "rating": 2,
+            "description": "Currently learning and very very interested in Elixir"
         }
-    },
-    "cloudProviders": {
-        "AWS": {
-            "level": 80,
-            "description": ""
+    ],
+    "cloudProviders": [
+        {
+            "title": "AWS",
+            "rating": 5,
+            "description": "I use AWS for everything. I stopped using shared hosting and instead went full AWS."
         },
-        "GCE": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "GCE",
+            "rating": 4,
+            "description": "Learned some GCE for fun. It's quiet simple to use in comparison to AWS."
         },
-        "Linode": {
-            "level": 60,
-            "description": ""
+        {
+            "title": "Linode",
+            "rating": 3,
+            "description": "Whenever I need a cheap server with good networking throughput, this is the goto."
         },
-        "Digital Ocean": {
-            "level": 60,
-            "description": ""
+        {
+            "title": "Digital Ocean",
+            "rating": 3,
+            "description": "Similar to Linode, DO provides good services at typically better prices than AWS."
         }
-    },
-    "devopsSoftware": {
-        "Terraform": {
-            "level": 80,
-            "description": ""
+    ],
+    "devopsSoftware": [
+        {
+            "title": "Terraform",
+            "rating": 5,
+            "description": "I barely sign into AWS anymore because of TF. Have grown comfortable creating my own TF modules."
         },
-        "Docker": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Docker",
+            "rating": 4,
+            "description": "Use it for dev, staging, and production environments. Great in combination with ECS."
         },
-        "Jenkins": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Jenkins",
+            "rating": 4,
+            "description": "Irreplaceable automation monolith >:("
         },
-        "Gitlab": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Gitlab",
+            "rating": 4,
+            "description": "Probably the best thing since sliced bread. Gitlab will tempt you to drop Jenkins forever."
         },
-        "Github": {
-            "level": 80,
-            "description": ""
+        {
+            "title": "Github",
+            "rating": 5,
+            "description": "A dev without a github is not a dev."
         },
-        "Bitbucket": {
-            "level": 60,
-            "description": ""
+        {
+            "title": "Bitbucket",
+            "rating": 3,
+            "description": "Used it for a bit for private repos before I discovered Gitlab."
+        },
+        {
+            "title": "Kubernetes",
+            "rating": 2,
+            "description": "Haven't gone beyond basic tutorials just yet. K8 requires a lot of attention. There is a lot to learn in this world."
         }
-    },
-    "frameworks": {
-        "Hapijs": {
-            "level": 90,
-            "description": ""
+    ],
+    "frameworks": [
+        {
+            "title": "Hapijs",
+            "rating": 5,
+            "description": "ExpressJS is a joke compared to Hapi. THE nodejs server framework. Battle tested. Don't look anywhere else, trust me."
         },
-        "Reactjs": {
-            "level": 80,
-            "description": ""
+        {
+            "title": "Reactjs",
+            "rating": 4,
+            "description": "Do I know facebook's overtly complicated solution to the DOM's need for client side templating? Of course I do. Do I love it? Nope. But I know pretty well (by force :P)."
         },
-        "Riotjs": {
-            "level": 90,
-            "description": ""
+        {
+            "title": "Riotjs",
+            "rating": 5,
+            "description": "The free internet's superbly simple solution to client side templating. Tiny, elegant, easy to learn. I learned riot in 2 days of the 2 weeks I was learning react -_- ."
         },
-        "Preactjs": {
-            "level": 80,
-            "description": ""
+        {
+            "title": "Preactjs",
+            "rating": 4,
+            "description": "ReactJS's not-annoying little brother. It's like 4kb and actually fun to code. Closer to DOM. More predictable vs React."
         },
-        "Ruby on Rails": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Ruby on Rails",
+            "rating": 4,
+            "description": "Rails gave me legs in my programming career. I learned MVC, data structures, good conventions, OOP, and other fantastic principles on Rails."
         },
-        "Vuejs": {
-            "level": 50,
-            "description": ""
+        {
+            "title": "Vuejs",
+            "rating": 3,
+            "description": "Can't say I've taken Vue for a full ride yet. I honestly preferred Riot's simplicity and familiarity. I tend to run from tools that implement a DSL over DOM."
         },
-        "Phoenix": {
-            "level": 50,
-            "description": ""
+        {
+            "title": "Phoenix",
+            "rating": 2,
+            "description": "My evolution from Rails to Node has brought me here. It is a skill in development."
         },
-        "Laravel": {
-            "level": 50,
-            "description": ""
+        {
+            "title": "Laravel",
+            "rating": 2,
+            "description": "Haven't done much except a couple sample apps, and help friends with their laravel projects. Minimal stuff, but it's very Rails-like, which is cool."
         }
-    },
-    "databases": {
+    ],
+    "databases": [
 
-        "MySQL / MariaDB": {
-            "level": 80,
-            "description": ""
+        {
+            "title": "MySQL / MariaDB",
+            "rating": 5,
+            "description": "I have a love-hate relationship with MySQL because I know Postgres, but it's a DB I know well."
         },
-        "PostgreSQL": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "PostgreSQL",
+            "rating": 4,
+            "description": "My goto. Why the entire internet doesn't switch to using Postgres is beyond me."
         },
-        "SQLite3": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "SQLite3",
+            "rating": 5,
+            "description": "The best test database in the world. I use it for integration tests in isolated environments (gitlab runners)."
         },
-        "MongoDB": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "MongoDB",
+            "rating": 3,
+            "description": "Great for cache. Used it as a serious DB once and couldn't stand it's non-relational attributes so I switched to PG."
         }
-    },
-    "expertise": {
-        "Javascript": {
-            "level": 90,
-            "description": ""
+    ],
+    "expertise": [
+        {
+            "title": "Javascript",
+            "rating": 5,
+            "description": "Highly proficient"
         },
-        "NodeJS": {
-            "level": 90,
-            "description": ""
+        {
+            "title": "NodeJS",
+            "rating": 5,
+            "description": "Highly proficient"
         },
-        "DOM": {
-            "level": 90,
-            "description": ""
+        {
+            "title": "DOM",
+            "rating": 5,
+            "description": "Highly proficient"
         },
-        "Ruby": {
-            "level": 70,
-            "description": ""
+        {
+            "title": "Ruby",
+            "rating": 4,
+            "description": "Very proficient"
+        },
+        {
+            "title": "PHP",
+            "rating": 3,
+            "description": "Used to proficient but it's been a while"
         }
-    },
+    ],
     "concepts": {
 
         "OOP": "",
@@ -153,5 +196,81 @@
         "State Management": "",
         "Build Tools": "",
         "Server Management": ""
-    }
+    },
+    "experience": [
+        {
+            "date": "05/2016 - 03/2019",
+            "company": "Global Eagle",
+            "role": "Full Stack Developer",
+            "responsibilities": [
+                "Fullstack using HapiJS",
+                "Develop frontend workflows using Gulp, Grunt, Webpack, so developers can use modern javascript features.",
+                "Support older browsers",
+                "Support legacy jQuery code",
+                "Use jQuery as SPA for legacy browser support",
+                "Docker deployments using Jenkins",
+                "TDD",
+                "Agile management using JIRA",
+                "Worked on decommissioned Angular 1 project",
+                "Working on next level projects using modern frontend tools (react, vue, imba, riot)",
+                "Develop internal dev tools, CLI tools, etc."
+            ]
+        },
+        {
+            "date": "05/2015 - 05/2016",
+            "company": "Event Entertainment Group",
+            "role": "Full Stack Developer",
+            "responsibilities": [
+                "Rebuilt https://miamimusicweek.com from the ground up (infrastructure, backend, and front-end) with a custom",
+                "API that supports previously built technologies, a custom admin, using modern web development tools and",
+                "libraries, over an AWS infrastructure.",
+                "Upgraded and organize development workflow.",
+                "Took the lead in research and implementation of technological infrastructure.",
+                "Setup development environments for other developers and team members.",
+                "Introduced and Implemented code versioning with git.",
+                "Introduced and Implemented the use of front-end development tools such as Gulp and SCSS.",
+                "Stabilized WordPress applications and environments.",
+                "Abstracted WordPress from its norm and create custom plugins for enhanced security and custom functionality.",
+                "Setup LAMPs, LEMPs, NGINX, PHP-FPM, RVM Ruby with Rails, and NodeJS stacks.",
+                "Created staging and production environments for various apps.",
+                "Migrated multiple WordPress sites to an all-in AWS infrastructure.",
+                "Manage AWS (Route 53, CloudFront, S3, EC2, IAM, SES, SQS, SNS, RDS, etc).",
+                "Lots of MySQL database management and migrations.",
+                "Implemented Auto-Scaling and Load Balancing on apps.",
+                "Worked on AWS Lambda for basic computational / decoupled services (NodeJS).",
+                "Custom work with Leaflet map API and Google Maps API.",
+                "Worked with the newer Postgres JSONB data types and created custom queries.",
+                "Setup server management functions and deployments using Capistrano"
+            ]
+        },
+        {
+            "date": "1/2014 - 5/2015",
+            "company": "Freelance",
+            "role": "Self Employed",
+            "responsibilities": [
+                "Create WordPress Plugins and Themes for clients",
+                "Worked on a Code Igniter project",
+                "Worked a couple Laravel projects",
+                "Deploy Wordpress to AWS, WP Engine, and shared hostings",
+                "Worked various Ruby on Rails projects",
+                "Deploy Rails projects on Heroku, AWS Beanstalk, etc",
+                "Use Capistrano for simple server management",
+                "Work with Bootstrap / Zurb Foundation",
+                "Built my own CSS frameworks",
+                "Produce landing pages",
+                "Created an angular 1 streaming radio player"
+            ]
+        },
+        {
+            "date": "12/2012 - 1/2014",
+            "company": "Do You Remember",
+            "role": "Frontend Developer",
+            "responsibilities": [
+                "Front end Ruby on Rails building a social network on the first take of the project.",
+                "Websockets chat using Pusher",
+                "Consume 3rd party API for chat suggestions (amazon, ebay, wikipedia, etc)",
+                "Later converted into a stories publication, for which I created a WordPress app."
+            ]
+        }
+    ]
 }

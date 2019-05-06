@@ -1,0 +1,60 @@
+@mixin button ($color, $hover, $text, $text-hover)
+
+    .button,
+    button,
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit']
+        color: $text
+        background-color: $color
+        border: .1rem solid $color
+
+        &:focus,
+        &:hover
+            background-color: $hover
+            border-color: $hover
+            color: $text-hover
+            outline: 0
+
+        &[disabled]
+            cursor: default
+            opacity: .5
+
+            &:focus,
+            &:hover
+                background-color: $color
+                border-color: $color
+
+        &.button-outline
+            background-color: transparent
+            color: $color
+
+            &:focus,
+            &:hover
+                background-color: transparent
+                border-color: $hover
+                color: $hover
+
+            &[disabled]
+
+                &:focus,
+                &:hover
+                    border-color: inherit
+                    color: $color
+
+        &.button-clear
+            background-color: transparent
+            border-color: transparent
+            color: $color
+
+            &:focus,
+            &:hover
+                background-color: transparent
+                border-color: transparent
+                color: $hover
+
+            &[disabled]
+
+                &:focus,
+                &:hover
+                    color: $color

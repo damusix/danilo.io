@@ -1,0 +1,23 @@
+<repos>
+
+    <div
+        class='col work'
+        each={ repo in state.repos }
+        if={ !repo.fork }
+    >
+        <a href="{ repo.html_url }" target="_blank">{ repo.name }</a>
+        <p>{ repo.description }</p>
+    </div>
+
+    <script>
+
+        export default {
+            onBeforeMount(props, state) {
+
+            }
+            onBeforeUpdate() {
+
+            }
+        }
+    </script>
+</repos>

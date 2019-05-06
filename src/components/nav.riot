@@ -1,13 +1,51 @@
 <app-nav>
 
-    <h2>Nav</h2>
+    <h1 class='col w-34 mobile-w-100'>
+        <a scroll to='body'>Danilo Alonso</a>
+
+        <a onclick={ toggle } class='toggle hide mobile-block float-right'>
+            <i class='fa fa-bars'></i>
+        </a>
+    </h1>
+
+    <nav class="col w-66 mobile-w-100 { state.open ? 'open' : '' }">
+        <h2 class='hide mobile-block mobile-title'>
+            Menu
+            <a class='float-right toggle' onclick={ toggle }><i class='fa fa-times fa-fw'></i></a>
+        </h2>
+        <a scroll to="[is='about']">About</a>
+        <a scroll to="[is='experience']">Experience</a>
+        <a scroll to="[is='skills']">Skills</a>
+        <a scroll to="[is='work']">My Work</a>
+    </nav>
 
     <script>
 
+        import { $ } from 'bianco';
+        import { add } from 'bianco.events';
+
         export default {
-            onBeforeMount(_, props) {
+            onBeforeMount() {
 
+                this.state.open = false;
+            }
+            onMounted() {
 
+                this.actions.scrollLinks();
+
+                add(
+                    $('nav a[to]', this.root),
+                    'click',
+                    this.toggle
+                );
+
+            }
+            toggle() {
+                if (this.state.isMobile) {
+                    this.update({
+                        open: !this.state.open
+                    })
+                }
             }
         }
     </script>

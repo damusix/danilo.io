@@ -1,6 +1,8 @@
 <gists>
 
-    <p each={ gist in state.gists }>{ gist.description }</p>
+    <li class='col work' each={ gist in state.gists }>
+        <a href="{ gist.html_url }" target="_blank">{ gist.description }</a>
+    </li>
 
     <script>
 

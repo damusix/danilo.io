@@ -1,0 +1,17 @@
+<rating>
+
+    <div>
+        <h5>{ props.title }</h5>
+        <stars rating={ props.rating }></stars>
+        <p>{ props.description }</p>
+    </div>
+
+    <script>
+        export default {
+
+            onMounted() {
+                console.log(this)
+            }
+        }
+    </script>
+</rating>

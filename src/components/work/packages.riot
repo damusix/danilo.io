@@ -1,0 +1,22 @@
+<packages>
+
+    <div
+        class='col work'
+        each={ package in state.packages }
+    >
+        <a href="https://npmjs.org/package/{ package.name[0] }" target="_blank">{ package.name }</a>
+        <p>{ package.description }</p>
+    </div>
+
+    <script>
+
+        export default {
+            onBeforeMount(props, state) {
+
+            }
+            onBeforeUpdate() {
+
+            }
+        }
+    </script>
+</packages>
