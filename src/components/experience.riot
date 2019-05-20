@@ -1,6 +1,6 @@
 <experience>
 
-    <h2>Experience</h2>
+    <h2 class="text-center">Experience</h2>
 
     <div each={ exp in state.data.experience } class="grid">
         <div class="col w-33">
@@ -10,8 +10,11 @@
             <p>{ exp.date }</p>
         </div>
         <div class="col w-67">
-            <ul>
-                <li each={ responsibilty in exp.responsibilities }>{ responsibilty }</li>
+            <ul class='fa-ul'>
+                <li each={ responsibilty in exp.responsibilities }>
+                    <span class="fa-li"><i class="fal fa-chevron-right"></i></span>
+                    { responsibilty }
+                </li>
             </ul>
         </div>
     </div>

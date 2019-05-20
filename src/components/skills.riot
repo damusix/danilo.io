@@ -1,42 +1,14 @@
 <skills>
-    <h2>Skills</h2>
+    <h2 class="text-center">Skills</h2>
 
     <h3>Languages:</h3>
 
-    <div if={ false } id="WORKING VERSION" class='skill grid wrap'>
-        <div
-            class="rating col"
-            each={ item in state.data.programmingLanguages }
-            is="rating"
-            title={ item.title }
-            rating={ item.rating }
-            description={ item.description }
-        ></div>
-    </div>
-
-    <!-- div if={ false } id="THIS WILL NOT COMPILE" class='skill grid wrap'>
+    <div id="THIS WILL NOT COMPILE" class='skill grid wrap'>
         <div
             class="rating col"
             each={ item in state.data.programmingLanguages }
             is="rating"
             { ...item }
-        ></div>
-    </div -->
-
-    <div id="THIS WORKS BUT DOESNT SPREAD IF IS COMPONENT" class='skill grid wrap'>
-        <div
-            class="rating col"
-            each={ item in state.data.programmingLanguages }
-            ...{ item }
-        ></div>
-    </div>
-
-    <div id="THIS WORKS BUT IS NOT RIOT COMPONENT" class='skill grid wrap'>
-        <div
-            class="rating col"
-            each={ item in state.data.programmingLanguages }
-            is="rating"
-            ...{ item }
         ></div>
     </div>
 
@@ -48,9 +20,7 @@
             class="rating col"
             each={ item in state.data.cloudProviders }
             is="rating"
-            title={ item.title }
-            rating={ item.rating }
-            description={ item.description }
+            { ...item }
         ></div>
     </div>
 
@@ -62,9 +32,7 @@
             class="rating col"
             each={ item in state.data.devopsSoftware }
             is="rating"
-            title={ item.title }
-            rating={ item.rating }
-            description={ item.description }
+            { ...item }
         ></div>
     </div>
 
@@ -77,9 +45,7 @@
             class="rating col"
             each={ item in state.data.frameworks }
             is="rating"
-            title={ item.title }
-            rating={ item.rating }
-            description={ item.description }
+            { ...item }
         ></div>
     </div>
 
@@ -90,9 +56,7 @@
             class="rating col"
             each={ item in state.data.databases }
             is="rating"
-            title={ item.title }
-            rating={ item.rating }
-            description={ item.description }
+            { ...item }
         ></div>
     </div>
 
@@ -103,7 +67,6 @@
 
             onBeforeMount() {
 
-                console.log(this.state)
             }
         }
     </script>

@@ -1,4 +1,45 @@
 <app-footer>
 
-    <h2>Footer</h2>
+    <div>Copyright © { year() } Danilo Alonso.</div>
+    <p>
+        <a href="https://github.com/damusix/danilo.io">This site</a>
+        was built using
+        <a href="https://sass-lang.com/">SASS</a>,
+        <a href="https://riot.js.org/next/documentation">Riot 4</a>,
+        <a href="https://github.com/biancojs/bianco">BiancoJS</a>,
+        and
+        <a href="https://github.com/GianlucaGuarini/erre">Erre</a>.
+    </p>
+    <p class='explanation'>
+        <strong>Reasoning behind stack selection:</strong>
+        <br />
+        Riot is a templating language,
+        Bianco is a DOM utility,
+        and Erre is a stream utility used to manage state among components.
+        This portfolio website is used as an example to show how one can build
+        projects using a different paradigm that isn't ReactJS. By using stream as state management,
+        which is an implementation of <a href="http://meiosis.js.org/">meiosis pattern</a>,
+        I intend to show how one can share state across components without the bulky,
+        boilerplate-intensive workflow that Redux implements.
+        I also implement a simple SASS framework implementation based on <a href="https://milligram.io">milligram.io</a>
+        In order to display the fact that you may not always need Bootstrap.
+        CSS 3 makes things much more manageable in modern browsers.
+        <br />
+        <br />
+        In summary, I am of the opinion that, when one understands
+        the problem they are trying to solve,
+        the foundations they are building upon
+        (namely HTML5, CSS3, DOM, and ECMA2015 in the context of this site),
+        and the purpose of the tools that they are using,
+        one can more simply and more effectively solve problems.
+    </p>
+
+    <script>
+
+        export default {
+            year() {
+                return (new Date).getFullYear()
+            }
+        }
+    </script>
 </app-footer>

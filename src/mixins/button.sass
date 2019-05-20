@@ -1,10 +1,6 @@
-@mixin button ($color, $hover, $text, $text-hover)
+@mixin button ($className, $color, $hover, $text, $text-hover)
 
-    .button,
-    button,
-    input[type='button'],
-    input[type='reset'],
-    input[type='submit']
+    #{$className}
         color: $text
         background-color: $color
         border: .1rem solid $color
