@@ -26,6 +26,7 @@
 
         import { $ } from 'bianco';
         import { add } from 'bianco.events';
+        import css from 'bianco.css';
         import anime from 'animejs';
 
         export default {
@@ -52,11 +53,18 @@
                 if (this.state.open === null) {
                     return;
                 }
+
                 if (this.state.isMobile) {
 
                     const targets = this.root.children.overlay;
 
-                    this.state.open && targets.classList.add('open');
+                    if (this.state.open) {
+
+                        targets.classList.add('open');
+                        css.set(document.body, {
+                            overflow: 'hidden'
+                        });
+                    }
 
                     const animation = {
                         targets,
@@ -65,8 +73,10 @@
                         easing: 'linear',
                         complete: () => {
 
-                            console.log('done');
-                            !this.state.open && targets.classList.remove('open');
+                            if (!this.state.open) {
+                                targets.classList.remove('open');
+                                css.remove(document.body, 'overflow');
+                            }
                         }
                     };
 
