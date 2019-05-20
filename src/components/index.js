@@ -1,8 +1,8 @@
 import * as riot from 'riot';
 
 import Navigation from './nav.riot';
-import Footer from './footer.riot';
 import Header from './header.riot';
+import Footer from './footer.riot';
 import About from './about.riot';
 import Experience from './experience.riot';
 import Skills from './skills.riot';
@@ -15,8 +15,8 @@ import Ratings from './ratings/container.riot';
 import Stars from './ratings/stars.riot';
 
 riot.register('app-nav', Navigation);
-riot.register('app-footer', Footer);
 riot.register('site-header', Header);
+riot.register('app-footer', Footer);
 riot.register('about', About);
 riot.register('header', Header);
 riot.register('gists', Gists);

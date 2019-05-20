@@ -1,6 +1,4 @@
 <app-footer>
-
-    <div>Copyright © { year() } Danilo Alonso.</div>
     <p>
         <a href="https://github.com/damusix/danilo.io">This site</a>
         was built using
@@ -9,15 +7,16 @@
         <a href="https://github.com/biancojs/bianco">BiancoJS</a>,
         and
         <a href="https://github.com/GianlucaGuarini/erre">Erre</a>.
-    </p>
-    <p class='explanation'>
+        <br />
+        <br />
+
         <strong>Reasoning behind stack selection:</strong>
         <br />
         Riot is a templating language,
         Bianco is a DOM utility,
         and Erre is a stream utility used to manage state among components.
         This portfolio website is used as an example to show how one can build
-        projects using a different paradigm that isn't ReactJS. By using stream as state management,
+        projects using a different paradigm that isn't React or Angular. By using stream as state management,
         which is an implementation of <a href="http://meiosis.js.org/">meiosis pattern</a>,
         I intend to show how one can share state across components without the bulky,
         boilerplate-intensive workflow that Redux implements.
@@ -29,10 +28,14 @@
         In summary, I am of the opinion that, when one understands
         the problem they are trying to solve,
         the foundations they are building upon
-        (namely HTML5, CSS3, DOM, and ECMA2015 in the context of this site),
+        (namely HTML5, CSS3, DOM, and ECMA2015, in the context of this site),
         and the purpose of the tools that they are using,
         one can more simply and more effectively solve problems.
     </p>
+
+    <hr />
+
+    <p class='copyright'>Copyright © { year() } Danilo Alonso.</p>
 
     <script>
 

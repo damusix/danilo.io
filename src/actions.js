@@ -2,8 +2,6 @@ import ComponentActions from './components/actions';
 import Api from './api';
 import viewport from 'bianco.viewport';
 
-const width = viewport.documentWidth();
-
 export default (stream) => ({
 
     getRepos: async () => {
