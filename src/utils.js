@@ -17,7 +17,6 @@ const observer = new IntersectionObserver(
                     return;
                 }
 
-                console.log('animeConfig', elem.animeConfig);
                 anime({
                     targets: elem,
                     opacity: [0, 1],
