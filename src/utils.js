@@ -1,3 +1,62 @@
+import css from 'bianco.css';
+import anime from 'animejs';
+
+import { state } from './index.js';
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const elem = entry.target;
+                const { animeConfig } = elem;
+
+                if (animeConfig.ran) {
+                    return;
+                }
+
+                console.log('animeConfig', elem.animeConfig);
+                anime({
+                    targets: elem,
+                    opacity: [0, 1],
+                    easing: 'linear',
+                    duration: 1000,
+                    delay: 0,
+                    ...animeConfig
+                });
+
+                animeConfig.ran = true;
+            }
+        });
+    },
+    {
+        // root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    }
+)
+
+const observedElements = new Set();
+
+export const observeElement = (el, animeConfig) => {
+
+    if (state.print) {
+        return;
+    }
+
+    if (!observedElements.has(el)) {
+
+        el.animeConfig = animeConfig || {};
+        observedElements.add(el);
+        observer.observe(el);
+        css.set(el, { opacity: 0 });
+    }
+};
+
+
+
 export const debounce = function(func, wait, immediate) {
     var timeout;
     return function() {

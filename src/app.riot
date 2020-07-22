@@ -1,37 +1,42 @@
 <app>
 
-    <header id="nav" is="app-nav" class="grid wrap no-padding"></header>
+    <header if={ !state.print } id="nav" is="app-nav" class="grid wrap no-padding"></header>
 
     <section
         id='site-header'
         is="site-header"
-        class="screen dark text-center grid column center justify-center"
+        class="{ screenClass('dark') } text-center grid column center justify-center"
     ></section>
     <section
         id="about"
         is="about"
-        class="screen"
+        class="{ screenClass() }"
     ></section>
     <section
         id="experience"
         is="experience"
-        class="screen dark"
+        class="{ screenClass('dark') } page-break"
     ></section>
     <section
         id="skills"
         is="skills"
-        class="screen"
+        class="{ screenClass() }"
     ></section>
     <section
         id="work"
         is="work"
-        class="screen dark"
+        class="{ screenClass('dark') }"
     ></section>
 
     <footer is="app-footer"></footer>
 
     <script>
         export default {
+            screenClass(otherClasses) {
+                if (!this.state.print) return 'screen ' + otherClasses;
+
+                return '';
+            },
             onBeforeMount(props) {
 
                 this.actions.getGists();

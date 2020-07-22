@@ -25,3 +25,19 @@ ul,
 hr
 	margin-top: 2rem
 	margin-bottom: 2rem
+
+
+.page-break
+	page-break-after: always
+
+
+@mixin spacingPrint()
+
+	// li
+	// 	margin-bottom: 0.5rem
+
+@print
+	@include spacingPrint()
+
+.print
+	@include spacingPrint()

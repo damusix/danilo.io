@@ -1,0 +1,85 @@
+#experience
+
+    .grid
+        margin-bottom: 2.5rem
+        padding: 1rem
+        border: 1px solid black
+        background: rgba(0,0,0,0.2)
+        box-shadow: 0 1px 5px -3px rgba(0,0,0,0.2)
+        border-radius: 0.25rem
+
+        &, h3, h5, ul li, p
+            transition: all 250ms
+
+
+        &:hover
+            background: rgba(0,0,0,0.5)
+            box-shadow: 0 3px 10px -3px rgba(0,0,0,0.7)
+            border-color: #fff
+
+            ul li
+                color: #fff
+
+            &:nth-of-type(1)
+                border-color: $red
+                h3
+                    color: $red
+
+            &:nth-of-type(2)
+                border-color: $yellow
+                h3
+                    color: $yellow
+
+            &:nth-of-type(3)
+                border-color: $bluegreen
+                h3
+                    color: $bluegreen
+
+            &:nth-of-type(4)
+                border-color: $purple
+                h3
+                    color: $purple
+
+        ul
+            list-style: none
+            li
+                line-height: 1
+
+        .fa-ul
+            margin-left: 1.3rem
+
+        h3,h5,p
+            margin-bottom: 1rem
+
+        .col, p
+            margin-bottom: 1rem
+
+        .company
+            padding-right: 1rem
+
+
+@mixin experiencePrint()
+
+    // height: 100%
+
+    .grid
+        margin-bottom: 2.5rem
+        padding: 1rem
+        border: 1px solid #ccc
+        background: transparent
+
+        .col.company
+            h3,h5,p
+                margin-bottom: 0
+
+        &:hover
+            box-shadow: none
+            ul li
+                color: #000
+
+.print #experience
+    @include experiencePrint()
+
+@media print
+    #experience
+        @include experiencePrint()

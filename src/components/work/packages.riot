@@ -2,20 +2,28 @@
 
     <div
         class='col work'
-        each={ package in state.packages }
+        each={ pkg in state.packages }
     >
-        <a href="https://npmjs.org/package/{ package.name[0] }" target="_blank">{ package.name }</a>
-        <p>{ package.description }</p>
+        <a href="https://npmjs.org/package/{ pkg.name[0] }" target="_blank">{ pkg.name }</a>
+        <p>{ pkg.description }</p>
     </div>
 
     <script>
 
+        import { observeElement } from '../../utils';
+
         export default {
-            onBeforeMount(props, state) {
 
-            }
-            onBeforeUpdate() {
+            onUpdated() {
 
+                this.$$('.work').forEach((el, i) => observeElement(el, {
+                    translateX: {
+                        value: [250, 0],
+                        easing: 'easeInQuad'
+                    },
+                    delay: i * 50,
+                    duration: 500
+                }));
             }
         }
     </script>

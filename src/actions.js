@@ -2,28 +2,91 @@ import ComponentActions from './components/actions';
 import Api from './api';
 import viewport from 'bianco.viewport';
 
-export default (stream) => ({
+import PackagesFallback from './data/packages.json';
+import ReposFallback from './data/repos.json';
+import GistsFallback from './data/gists.json';
 
-    getRepos: async () => {
+export default (stream) => {
 
-        const { data } = await Api.getRepos();
-        stream.push({ repos: data });
-    },
-    getGists: async () => {
+    const tryCatchFallback = async (fn, fallback) => {
 
-        const { data } = await Api.getGists();
-        stream.push({ gists: data });
-    },
-    getPackages: async () => {
+        try {
+            const { data } = await fn();
 
-        const { data } = await Api.getPackages();
-        stream.push({ packages: data.results });
-    },
-    screenChecks: () => {
+            if (!data) {
 
-        stream.push({
-            isMobile: viewport.documentWidth() < 16 * 40
-        });
-    },
-    ...ComponentActions(stream)
-})
+                return fallback;
+            }
+
+            return data
+        }
+        catch (e) {
+
+            console.warn('Could not fetch from 3rd party resource. Using fallback instead.');
+            console.warn(e);
+            return fallback;
+        }
+    }
+
+    return {
+
+        getRepos: async () => {
+
+            const data = await tryCatchFallback(
+                Api.getRepos,
+                {
+                    repos: ReposFallback,
+                    rateLimited: { repos: true }
+                }
+            );
+
+            if (data.rateLimited)  {
+                stream.push(data);
+            }
+            else {
+                stream.push({ repos: data });
+            }
+        },
+        getGists: async () => {
+
+            const data = await tryCatchFallback(
+                Api.getGists,
+                {
+                    gists: GistsFallback,
+                    rateLimited: { gists: true }
+                }
+            );
+
+            if (data.rateLimited)  {
+                stream.push(data);
+            }
+            else {
+                stream.push({ gists: data });
+            }
+        },
+        getPackages: async () => {
+
+            const data = await tryCatchFallback(
+                Api.getPackages,
+                {
+                    packages: GistsFallback.results,
+                    rateLimited: { packages: true }
+                }
+            );
+
+            if (data.rateLimited)  {
+                stream.push(data);
+            }
+            else {
+                stream.push({ packages: data.results });
+            }
+        },
+        screenChecks: () => {
+
+            stream.push({
+                isMobile: viewport.documentWidth() < 16 * 40
+            });
+        },
+        ...ComponentActions(stream)
+    };
+};

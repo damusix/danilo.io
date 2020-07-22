@@ -1,11 +1,11 @@
 import * as riot from 'riot';
 
-import Navigation from './nav.riot';
-import Header from './header.riot';
-import Footer from './footer.riot';
-import About from './about.riot';
-import Experience from './experience.riot';
-import Skills from './skills.riot';
+import Navigation from './nav/component.riot';
+import Header from './header/component.riot';
+import Footer from './footer/component.riot';
+import About from './about/component.riot';
+import Experience from './experience/component.riot';
+import Skills from './skills/component.riot';
 import Gists from './work/gists.riot';
 import Repos from './work/repos.riot';
 import Packages from './work/packages.riot';

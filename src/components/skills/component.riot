@@ -63,10 +63,13 @@
 
     <script>
 
+        import { observeElement } from '../../utils';
+
         export default {
 
-            onBeforeMount() {
+            onMounted() {
 
+                this.$$('.skill').forEach(el => observeElement(el));
             }
         }
     </script>

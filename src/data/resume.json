@@ -22,18 +22,18 @@
         },
         {
             "title": "Python",
-            "rating": 3,
-            "description": "Have done some minor things in Python. Have played with Falcon, Flask. Mostly for fun, but never needed it."
-        },
-        {
-            "title": "Erlang",
-            "rating": 2,
-            "description": "Currently learning and very very interested in Erlang"
+            "rating": 4,
+            "description": "Have played with Falcon. Actively help maintain some Flask apps."
         },
         {
             "title": "Elixir",
             "rating": 2,
             "description": "Currently learning and very very interested in Elixir"
+        },
+        {
+            "title": "Erlang",
+            "rating": 2,
+            "description": "Currently learning and very very interested in Erlang"
         }
     ],
     "cloudProviders": [
@@ -43,19 +43,19 @@
             "description": "I use AWS for everything. I stopped using shared hosting and instead went full AWS."
         },
         {
-            "title": "GCE",
+            "title": "Linode",
             "rating": 4,
-            "description": "Learned some GCE for fun. It's quiet simple to use in comparison to AWS."
+            "description": "Whenever I need a cheap server with good networking throughput, this is the goto."
         },
         {
-            "title": "Linode",
+            "title": "GCE",
             "rating": 3,
-            "description": "Whenever I need a cheap server with good networking throughput, this is the goto."
+            "description": "Learned some GCE for fun. It's quiet simple to use in comparison to AWS."
         },
         {
             "title": "Digital Ocean",
             "rating": 3,
-            "description": "Similar to Linode, DO provides good services at typically better prices than AWS."
+            "description": "Similar to Linode. Not much of a difference. Not my goto."
         }
     ],
     "devopsSoftware": [
@@ -66,7 +66,7 @@
         },
         {
             "title": "Docker",
-            "rating": 4,
+            "rating": 5,
             "description": "Use it for dev, staging, and production environments. Great in combination with ECS."
         },
         {
@@ -76,8 +76,8 @@
         },
         {
             "title": "Gitlab",
-            "rating": 4,
-            "description": "Probably the best thing since sliced bread. Gitlab will tempt you to drop Jenkins forever."
+            "rating": 5,
+            "description": "Run full CI/CD with ECS on Gitlab. Implement pipelines and automated deploys. Also build libraries and maintain automated semantic versioning with Gitlab."
         },
         {
             "title": "Github",
@@ -92,24 +92,24 @@
         {
             "title": "Kubernetes",
             "rating": 2,
-            "description": "Haven't gone beyond basic tutorials just yet. K8 requires a lot of attention. There is a lot to learn in this world."
+            "description": "Have some minor exposure to it, but have not deep-dived and put the time it deserves to be learned."
         }
     ],
     "frameworks": [
         {
             "title": "Hapijs",
             "rating": 5,
-            "description": "ExpressJS is a joke compared to Hapi. THE nodejs server framework. Battle tested. Don't look anywhere else, trust me."
+            "description": "Likely hands down the best nodejs server framework out now. Battle tested. Zero dependencies. It has everything."
         },
         {
             "title": "Reactjs",
-            "rating": 4,
-            "description": "Do I know facebook's overtly complicated solution to the DOM's need for client side templating? Of course I do. Do I love it? Nope. But I know pretty well (by force :P)."
+            "rating": 5,
+            "description": "Have built a couple of libraries to use with it. Lots of experience building on it, over 3 years exp."
         },
         {
             "title": "Riotjs",
             "rating": 5,
-            "description": "The free internet's superbly simple solution to client side templating. Tiny, elegant, easy to learn. I learned riot in 2 days of the 2 weeks I was learning react -_- ."
+            "description": "A superbly simple solution to client side templating. Tiny, elegant, small learning curve."
         },
         {
             "title": "Preactjs",
@@ -120,11 +120,6 @@
             "title": "Ruby on Rails",
             "rating": 4,
             "description": "Rails gave me legs in my programming career. I learned MVC, data structures, good conventions, OOP, and other fantastic principles on Rails."
-        },
-        {
-            "title": "Vuejs",
-            "rating": 3,
-            "description": "Can't say I've taken Vue for a full ride yet. I honestly preferred Riot's simplicity and familiarity. I tend to run from tools that implement a DSL over DOM."
         },
         {
             "title": "Phoenix",
@@ -138,26 +133,25 @@
         }
     ],
     "databases": [
-
+        {
+            "title": "PostgreSQL",
+            "rating": 5,
+            "description": "My goto when I have a choice of picking database. Why anyone would use anything else is beyond me."
+        },
         {
             "title": "MySQL / MariaDB",
             "rating": 5,
-            "description": "I have a love-hate relationship with MySQL because I know Postgres, but it's a DB I know well."
-        },
-        {
-            "title": "PostgreSQL",
-            "rating": 4,
-            "description": "My goto. Why the entire internet doesn't switch to using Postgres is beyond me."
+            "description": "Have been developing using MySql / Mariadb for over 8 years."
         },
         {
             "title": "SQLite3",
             "rating": 5,
-            "description": "The best test database in the world. I use it for integration tests in isolated environments (gitlab runners)."
+            "description": "The best test database in the world. Great for integration tests in isolated environments (gitlab runners)."
         },
         {
             "title": "MongoDB",
             "rating": 3,
-            "description": "Great for cache. Used it as a serious DB once and couldn't stand it's non-relational attributes so I switched to PG."
+            "description": "Great for quick apps and caching. I am definitely more of an SQL type of guy, but I can appreciate NoSQL."
         }
     ],
     "expertise": [
@@ -183,12 +177,21 @@
         },
         {
             "title": "PHP",
-            "rating": 3,
-            "description": "Used to proficient but it's been a while"
+            "rating": 4,
+            "description": "Proficient but rusty"
+        },
+        {
+            "title": "Python",
+            "rating": 4,
+            "description": "Proficient but not as knowledgleable with its APIs"
+        },
+        {
+            "title": "SH / Bash / ZSH",
+            "rating": 4,
+            "description": "Find myself in messy rabbit holes building bash CLI tools all the time"
         }
     ],
     "concepts": {
-
         "OOP": "",
         "Functional Programming": "",
         "OTP": "",
@@ -198,6 +201,44 @@
         "Server Management": ""
     },
     "experience": [
+        {
+            "date": "08/2017 - Present",
+            "company": "Miami Dev Shop",
+            "role": "Cofound / Lead Developer",
+            "responsibilities": [
+                "Manage a small dev team for client projects",
+                "Guide a watered down scrum/agile methodology",
+                "Enforce TDD and other dev best practices",
+                "Create Gitlab pipelines for deploying client applications",
+                "Maintain supporting libraries that facilitate team development",
+                "HapiJS server side API development",
+                "General technical consultation",
+                "Facilitate technical aspects of business analysis",
+                "Manage legacy flask / django apps",
+                "Manage client GhostJS apps",
+                "Manage client AWS infrastructures",
+                "Manage terraform modules and devops",
+                "System administration",
+                "Help clients understand what they need to build and why",
+                "Help local bootcamp graduates get their feet wet in the development industry"
+            ],
+            "pageBreak": true
+        },
+        {
+            "date": "07/2019 - 07/2020",
+            "company": "Netography, Inc",
+            "role": "Application Developer",
+            "responsibilities": [
+                "Fullstack React and ExpressJS",
+                "Build dashboards for network flow data using Highcharts",
+                "Interactive tables using React Table",
+                "Nested multi-table, multi-chart subcomponents",
+                "Functional React w/ Hooks",
+                "Meta programming with Redux and Redux Sagas",
+                "Jest tests for React, Redux and Sagas",
+                "Manage public Express API that communicates with private Elasticache API"
+            ]
+        },
         {
             "date": "05/2016 - 03/2019",
             "company": "Global Eagle",

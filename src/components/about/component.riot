@@ -1,0 +1,63 @@
+<about>
+    <h3 class='text-center'>Who I am</h3>
+
+    <div class="grid" if={ !state.print }>
+
+        <div class="image col w-50 mobile-w-100">
+            <img src="/public/img/selfie.jpg" alt="Danilo Alonso">
+        </div>
+        <div class="text col w-50 mobile-w-100">
+            <ul>
+                <li each={ item in data.list }>{ item }</li>
+            </ul>
+
+            <p>{ data.description }</p>
+        </div>
+    </div>
+
+    <div if={ state.print }>
+
+        <div class="image">
+            <img src="/public/img/selfie.jpg" alt="Danilo Alonso">
+        </div>
+        <div class="text">
+            <ul>
+                <li each={ item in data.list }>{ item }</li>
+            </ul>
+
+            <p>{ data.description }</p>
+    </div>
+
+    <script>
+
+        import { observeElement } from '../../utils';
+
+        const data = {
+            list: [
+                "Fullstack Developer",
+                "Javascript Nerd",
+                "Functional Programming Enthusiast",
+                "Explorer of Code Bases",
+            ],
+            description: "I am a fullstack developer. I can and have covered most tasks in the software development lifecycle. I naturally tend to gravitate towards anything Javascript (nodejs) and have a special knack for frontend, though I am absolutely fascinated by backend, devops, and sysadmin type of work. I work with react, redux, vue, and just about any frontend framework. You will also find me exploring outside the realm of popular corporate paradigms, because some of the coolest things are not popular. I like learning programming concepts in general and then implementing them in JS. Lately, my obsessions have led me into Elixir, Erlang, and Phoenix land. The concepts in the lands of Erlang are highly valuable and have dramatically changed the way I think about programming."
+        }
+
+        export default {
+
+            data,
+
+            animateIn() {
+
+                this.$$('ul li, p, .image').forEach((el, i) => observeElement(el, {
+                    delay: 500 + i * 250,
+                    duration: 500
+                }));
+            },
+
+            onMounted() {
+
+                setTimeout(this.animateIn, 500)
+            }
+        }
+    </script>
+</about>

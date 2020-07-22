@@ -1,0 +1,62 @@
+<site-header>
+
+    <div if={ !state.print }>
+        <h1 style='opacity: 0;'>Full Stack</h1>
+        <h3 style='opacity: 0;'>Web App Developer</h3>
+        <a style='opacity: 0;' href="mailto:danilo@alonso.network" class='button'>Contact Me</a>
+        <hr>
+        <a class='button icon' href="https://www.linkedin.com/in/danilo-alonso/">
+            <i class="fab fa-fw fa-linkedin"></i>
+        </a>
+        <a class='button icon' href="https://github.com/damusix">
+            <i class="fab fa-fw fa-github"></i>
+        </a>
+        <a class='button icon' href="https://www.npmjs.com/~damusix">
+            <i class="fab fa-fw fa-npm"></i>
+        </a>
+    </div>
+
+    <img
+        if={ !state.print }
+        style='opacity: 0;'
+        src="/public/img/karl-friedrich-schinkel-medieval-town.jpg"
+        alt="Medieval Town by the Water"
+    >
+
+    <div if={ state.print }>
+        <h1>Danilo Alonso</h1>
+        <a href="mailto:danilo@alonso.network">
+            <i class="fas fa-envelope"></i>
+            danilo@alonso.network
+        </a>
+        <a href="https://www.linkedin.com/in/danilo-alonso/">
+            <i class="fab fa-linkedin"></i> in/danilo-alonso
+        </a>
+        <a href="https://github.com/damusix">
+            <i class="fab fa-github"></i> @damusix
+        </a>
+        <a href="https://www.npmjs.com/~damusix">
+            <i class="fab fa-npm"></i> @damusix
+        </a>
+    </div>
+
+    <script>
+        import anime from 'animejs';
+
+        import { observeElement } from '../../utils';
+
+        export default {
+
+            animateIn() {
+                this.$$('img, h1, h3, a').forEach((el, i) => observeElement(el, {
+                    delay: 500 + i * 250,
+                    duration: 500
+                }));
+            },
+
+            onMounted() {
+                setTimeout(this.animateIn, 500)
+            }
+        }
+    </script>
+</site-header>

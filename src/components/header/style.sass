@@ -2,6 +2,9 @@
     position: relative
     overflow: hidden
 
+    // background: $gradient
+    // background-position: center
+
     & > div
         z-index: 2
 
@@ -20,3 +23,21 @@
         opacity: 0.3
         min-width: 1200px
         width: 100%
+
+
+@mixin headerPrint()
+    padding: 40px
+    height: 100%;
+    & > div
+        h1, h3
+            font-weight: bold
+            text-shadow: none
+        a
+            display: block
+
+.print #site-header
+    @include headerPrint()
+
+@media print
+    #site-header
+        @include headerPrint()

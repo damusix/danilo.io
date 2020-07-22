@@ -6,14 +6,20 @@
 
     <script>
 
+        import { observeElement } from '../../utils';
+
         export default {
-            onBeforeMount(props, state) {
 
+            onUpdated() {
 
-            }
-            onBeforeUpdate() {
-
-
+                this.$$('.work').forEach((el, i) => observeElement(el, {
+                    translateX: {
+                        value: [250, 0],
+                        easing: 'easeInQuad'
+                    },
+                    delay: i * 50,
+                    duration: 500
+                }));
             }
         }
     </script>

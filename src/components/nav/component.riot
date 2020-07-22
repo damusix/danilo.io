@@ -1,6 +1,6 @@
 <app-nav>
 
-    <h1 class='col w-34 mobile-w-100'>
+    <h1 class='col w-34 mobile-w-100 branding'>
         <a scroll to='body'>Danilo Alonso</a>
 
         <a onclick={ toggle } class='toggle hide mobile-block float-right'>
@@ -9,14 +9,12 @@
     </h1>
 
     <nav class="col w-66 mobile-w-100 { state.open ? 'open' : '' }">
-        <h2 class='hide mobile-block mobile-title'>
-            Menu
-            <a class='float-right toggle' onclick={ toggle }><i class='fa fa-times fa-fw'></i></a>
-        </h2>
+        <a scroll to="body" class="mobile">Top</a>
         <a scroll to="[is='about']">About</a>
         <a scroll to="[is='experience']">Experience</a>
         <a scroll to="[is='skills']">Skills</a>
         <a scroll to="[is='work']">My Work</a>
+        <a href="/?print" if={ !state.print }>Print</a>
     </nav>
 
 
@@ -29,25 +27,33 @@
         import css from 'bianco.css';
         import anime from 'animejs';
 
+        import { observeElement } from '../../utils';
+
         export default {
             onBeforeMount() {
 
                 this.state.open = null;
-            }
+            },
             onMounted() {
 
                 this.actions.scrollLinks();
 
-                console.log(this.root)
+
+                this.$$('nav > *').forEach((el, i) => observeElement(el, {
+                    translateX: {
+                        value: [250, 0],
+                        easing: 'easeInQuad'
+                    },
+                    delay: i * 50,
+                    duration: 500
+                }));
 
                 add(
                     $('nav a[to]', this.root),
                     'click',
                     this.toggle
                 );
-
-            }
-
+            },
             onUpdated() {
 
                 if (this.state.open === null) {
@@ -83,7 +89,7 @@
 
                     anime(animation);
                 }
-            }
+            },
 
             toggle() {
                 if (this.state.isMobile) {

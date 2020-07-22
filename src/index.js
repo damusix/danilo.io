@@ -10,15 +10,23 @@ import Actions from './actions';
 import App from './app.riot';
 import './components';
 
-import Data from './data.json'
+import Data from './data/resume.json'
 
-let state = {
+const print = window.location.search.match(/print/);
+
+export let state = {
     repos: [],
     gists: [],
     packages: [],
+    rateLimited: {
+        repos: false,
+        gists: false,
+        packages: false
+    },
     heading: 'Danilo Alonso',
     isMobile: null,
-    data: Data
+    data: Data,
+    print
 };
 
 const stream = erre(function (update) {
@@ -53,3 +61,8 @@ mountApp(document.getElementById('root'), {
     actions,
     state
 });
+
+if (print) {
+    document.body.classList.add('print');
+    window.print()
+}

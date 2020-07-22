@@ -1,0 +1,40 @@
+<experience>
+
+    <h2 class="text-center">Experience</h2>
+
+    <div each={ exp in state.data.experience } class="grid entry { exp.pageBreak ? 'page-break' : '' }">
+        <div class="col w-33 mobile-w-100 company">
+
+            <h3>{ exp.company }</h3>
+            <h5>{ exp.role }</h5>
+            <p>{ exp.date }</p>
+        </div>
+        <div class="col w-67 mobile-w-100 responsibilities">
+            <h5>Responsibilities</h5>
+            <ul class='fa-ul'>
+                <li each={ responsibilty in exp.responsibilities }>
+                    <span class="fa-li"><i class="fas fa-caret-right"></i></span>
+                    { responsibilty }
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        import anime from 'animejs';
+        import css from 'bianco.css';
+
+        import { observeElement } from '../../utils';
+
+        export default {
+
+            onMounted() {
+
+                this.$$('.entry').forEach((el, i) => observeElement(el, {
+                    duration: 500
+                }));
+            }
+        }
+    </script>
+</experience>
