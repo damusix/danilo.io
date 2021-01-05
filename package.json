@@ -17,7 +17,7 @@
     "@riotjs/hot-reload": "^4.0.1",
     "@riotjs/webpack-loader": "^4.0.3",
     "animejs": "^3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.0.5",
     "bianco": "^1.1.0",
     "css-loader": "^2.1.1",
